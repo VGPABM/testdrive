@@ -221,7 +221,7 @@ int main(int argc, char **argv){
                 vel.linear.x = mypid_x.calculate(wp[1][0], current_position.pose.position.x);
                 vel.linear.y = mypid_y.calculate(wp[1][1], current_position.pose.position.y);
                 vel.linear.z = mypid_z.calculate(wp[1][2], current_position.pose.position.z);
-                if(measure_dist(current_position.pose.position.x, current_position.pose.position.y, current_position.pose.position.z, wp[1][0], wp[1][1], wp[1][2]) < 0.2){
+                if(measure_dist(current_position.pose.position.x, current_position.pose.position.y, current_position.pose.position.z, wp[5][0], wp[5][1], wp[5][2]) < 0.2){
                     drone = landing;
                     forDelay = ros::Time::now();
                 }
